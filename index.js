@@ -101,6 +101,7 @@ app.get("/api/users/:_id/logs", (req, res) => {
 
   // filtrar por fecha (from)
   if (from) {
+
     const fromDate = new Date(from);
     if (fromDate.toString() !== "Invalid Date") {
       userExercises = userExercises.filter(e => e.date >= fromDate);
